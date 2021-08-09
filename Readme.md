@@ -44,7 +44,7 @@ For every training command `--dataset-name` and `--dataset idx` is required, fol
 8) az - 8
 8) be - 9
 
-Passing the  `dataset-name` and `--dataset idx` arguments in the training command allows the dataloader to fetch the specific dataset. 
+Passing the  `--dataset-name` and `--dataset idx` arguments in the training command allows the dataloader to fetch the specific dataset. 
 
 Language mask is generated in the very first step during the MNMT training. Values of the mask corresponds to the `dataset-idx`. Initially during the MNMT training, all values of the mask will be `1` reprsenting the parameters for MNMT. Sequentially for every training command, the mask gets updated with the values corresponding to the current language pair(`dataset-idx`). For every training command the checkpoint is saved in a differnt folder name based on the dataset name and index. for eg, for the MNMT training, folder `multi_1_baseline` is generated. After pruning the MNMT, checkpoints will be saved in `multi_1_final`.  After training on en-ar, checkpoints will be saved in `ar_2_finetuned`. After pruning en-ar parameters, checkpoints will be saved in `ar_2_final`. Till this moment the mask will have 3 values, `1` for the MNMT parameters, `2` for Arabic-English specific parameters and `0` for the pruned, i.e. free Parameters. Current mask is always saved with the checkpoints.
 
