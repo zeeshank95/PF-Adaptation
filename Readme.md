@@ -64,7 +64,7 @@ Dataset config is the `config.yaml` file and dataset registery is in `fairseq/da
 
 Download the pretrained model from [Gdrive](https://drive.google.com/file/d/1YognInl2gv76E2BlOux-287Cs__p0UqO/view?usp=sharing). Put the checkpoint in `/checkpoints/be_9_final/`. The checkpoint name is `final_last_be.pt`. This model is adapted for all the 8 language pairs as described in the paper. 
 
-eval_pf_adapt.sh is the evaluation script. It expects 5 arguments, 1) checkpoint folder name i.e. `be_9_final`, 2) checkpoint name i.e. `final_last_be`, 3) language-name i.e. the `datatset-name` for eg: `he`. 4) language index i.e. `dataset-idx` for eg: `3`, and 5) direction i.e `en-xx, or xx-en`. 
+`eval_pf_adapt.sh` is the evaluation script. It expects 5 arguments, 1) checkpoint folder name i.e. `be_9_final`, 2) checkpoint name i.e. `final_last_be`, 3) language-name i.e. the `datatset-name` for eg: `he`. 4) language index i.e. `dataset-idx` for eg: `3`, and 5) direction i.e `en-xx, or xx-en`. 
 
 To evaluate on German -> English, run `bash eval_pr.sh be_9_final final_last_be de 5 xx-en`
 To evaluate on English -> German, run `bash eval_pr.sh be_9_final final_last_be de 5 en-xx`    
