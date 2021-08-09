@@ -1,0 +1,38 @@
+corpora:
+  PF-Adapt-en-ar:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'ar']
+
+  PF-Adapt-en-az:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'az']
+
+  PF-Adapt-en-be:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'be']
+
+  PF-Adapt-en-de:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'de']
+
+  PF-Adapt-en-gl:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'gl']
+
+  PF-Adapt-en-he:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'he']
+
+  PF-Adapt-en-it:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'it']
+
+  PF-Adapt-en-sk:
+      splits: ['train', 'valid', 'test']
+      langs: ['en', 'sk']
+
+
+dictionary:
+    src: 'shared_dicts/fairseq.vocab'
+    tgt: 'shared_dicts/fairseq.vocab'
+
