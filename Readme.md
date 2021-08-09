@@ -26,11 +26,11 @@ Sentencepiece models, shared vocabulary of 40k subwords, and the dictionary are 
 
 # Training
 
-Run `bash run_pf_adapt_training.sh` to start the training. The script has multiple commands to sequentially adapt to each language pair. The first python command trains the Parent MNMT model on the multilingual dataset. Second command prunes the redundant parametersfrom the MNMT model and retrain for few more epochs for pruning compensation. Third command trains the free parameters on the first bilingual pair i.e. English-Arabic in the present implementation. Fourth command Prunes the redundant parameters from the En-Ar specific weights only and retrain for few more epochs. 
+Run `bash run_pf_adapt_training.sh` to start the training. The script has multiple commands to sequentially adapt to each language pair. The first python command trains the Parent MNMT model on the multilingual dataset. Second command prunes the redundant parametersfrom the MNMT model and retrain for few more epochs for pruning compensation. Third command trains the free parameters on the first bilingual pair i.e. English-Arabic in the present implementation. Fourth command Prunes the redundant parameters from the ar-en specific weights only and retrain for few more epochs. 
 
 Add more commands in `run_pf_adapt_training.sh` sequentially to adapt to more languages. 
 
-Important arguments which decides the training variants are `--init_mnmt`, `--prune`, `--prune_perc`, `--finetune`, `--bilingual`, `--xx-en`, `en-xx`.
+Important arguments which decides the training variants are `--init_mnmt`, `--prune`, `--prune_perc`, `--finetune`, `--bilingual`, `--xx-en`, `--en-xx`.
 
 For every training command `--dataset-name` and `--dataset idx` is required, following are the dataset name and index ids in the current implementation. 
 
