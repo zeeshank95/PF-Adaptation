@@ -10,9 +10,13 @@ We present a novel training method for Multilingual Neural Machine Translation(M
 # Requirements
 
 Python>=3.5
+
 Pytorch>=1.0
+
 LMDB
+
 sentencepiece
+
 nltk
 
 # Download Dataset
